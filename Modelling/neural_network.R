@@ -5,13 +5,13 @@ library(keras)
 library(tidyverse)
 
 #read in data
-shot_dat_train <- read_csv("data/shot_dat_train.csv") %>%
+shot_dat_train <- read_csv("data/processed/shot_dat_train.csv") %>%
   mutate(LOCATION = factor(LOCATION, levels = c("A", "H")),
          PERIOD = factor(PERIOD, levels = c(1, 2, 3, 4, 5, 6, 7)),
          PTS_TYPE = factor(PTS_TYPE, levels = c(2, 3)),
          opposing_team = factor(opposing_team))
 
-shot_dat_test <- read_csv("data/shot_dat_test.csv") %>%
+shot_dat_test <- read_csv("data/processed/shot_dat_test.csv") %>%
   mutate(LOCATION = factor(LOCATION, levels = c("A", "H")),
          PERIOD = factor(PERIOD, levels = c(1, 2, 3, 4, 5, 6, 7)),
          PTS_TYPE = factor(PTS_TYPE, levels = c(2, 3)),
@@ -83,7 +83,7 @@ history <- model %>% fit(
 
 plot(history)
 
-saveRDS(plot(history), "results/validation1.rds")
+#saveRDS(plot(history), "results/validation1.rds")
 #very little gain after 25 epochs
 
 #retrain new network from scratch for 25 epochs

@@ -11,7 +11,7 @@ library(randomForest)
 library(gbm)
 
 #read in processed data and factorize variables
-shot_dat <- read_csv("data/shot_dat_processed.csv") %>%
+shot_dat <- read_csv("data/processed/shot_dat_processed.csv") %>%
   mutate(LOCATION = factor(LOCATION, levels = c("A", "H")),
          PERIOD = factor(PERIOD, levels = c(1, 2, 3, 4, 5, 6, 7)),
          PTS_TYPE = factor(PTS_TYPE, levels = c(2, 3)),
