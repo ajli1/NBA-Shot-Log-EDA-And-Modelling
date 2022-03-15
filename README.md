@@ -1,7 +1,5 @@
 # Data Science III Final Project (STAT 301-3)
 
-This repository sets up the basic structure for your final project which will display/contain all of your work.
+The purpose of this project is to utilize shot log data within NBA games to predict if a field goal attempt will be made or missed.
 
-You are welcome to create/remove subdirectories as you see fit, but stay as organized as possible so others will be able to naviagte and inspect your work.
-
-Likely, you will have your EDA report (midterm), executive summary, and final report all accessible at this level.
+Data Memo, Exploratory Data Analysis, and final report can be viewed in the PDF files. Creation of predictive models can be found in the modelling folder.
